@@ -3,7 +3,7 @@
 // Root directory where server files are located
 const std::string root_directory = "site/";
 
-// Map to associate file extensions with MIME types
+// Map to associate file extensions with MIME types 
 std::unordered_map<std::string, std::string> content_type_map = {
     {".html", "text/html"},
     {".css", "text/css"},
