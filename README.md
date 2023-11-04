@@ -1,64 +1,80 @@
-##### 🌐 C++ Web Server
-##### 📌 Introduction
+# 🌐 C++ Web Server
+## 📌 Introduction
 
-This C++ Web Server is a robust, efficient, and easy-to-use web server built using the standalone ASIO library. It's designed to serve static files from a specified root directory over HTTP. The server is suitable for a wide array of applications including hosting websites, providing file downloads, or even for educational purposes to understand the basics of web server operations and HTTP protocols.
+**This C++ Web Server is a robust, efficient, and easy-to-use web server built using the standalone ASIO library. It's designed to serve static files from a specified root directory over HTTP. The server is suitable for a wide array of applications including hosting websites, providing file downloads, or even for educational purposes to understand the basics of web server operations and HTTP protocols.**
 
-##### ⚙️ Features
+## ⚙️ Features
 
-- **Multi-threaded**: Efficiently handles multiple connections concurrently using threads.
-- **MIME Type Recognition**: Automatically determines the MIME type based on file extensions.
-- **Static File Serving**: Serves files from a specified root directory.
-- **Local Network Accessibility**: Accessible from any device within the same local network.
+- **Multi-threaded:
+    Efficiently handles multiple connections concurrently using threads.**
+- **MIME Type Recognition:
+  Automatically determines the MIME type based on file extensions.**
+- **Static File Serving:
+  Serves files from a specified root directory.**
+- **Local Network Accessibility:
+  Accessible from any device within the same local network.**
 
-##### 📋 User Manual
-###### Prerequisites
+## ⚙️ Enhanced Features
 
-- **C++ Compiler**: A modern C++ compiler that supports C++11 standard (e.g., `g++`).
-- **ASIO Library**: This project uses the standalone version of ASIO, which does not require Boost. It can be installed via package managers like `apt` on Ubuntu:
-  ```bash
-  sudo apt install libasio-dev
-  ```
-  Or you can download it from [ASIO's official website](https://think-async.com/Asio/).
+### Dynamic Content:
+**In addition to serving static files, the server is capable of delivering dynamic web pages. Users can interact with elements on the page, such as clickable areas that redirect to external URLs. An example implementation of this feature is provided in the project, where users can choose between two options (represented as a red pill and a blue pill) which redirect them to different YouTube videos.**
 
-###### Compilation
+### Customizable Styles: 
+**The server supports custom CSS styling, allowing for fully customizable web pages. The provided example showcases a webpage with a fixed background image, flexbox-centered content, and responsive design for different viewport sizes.**
 
-Ensure you have `g++` and the ASIO library installed. Navigate to the root directory of the project and compile the server using the following command:
-```bash
-g++ -std=c++11 -pthread src/server.cpp -o bin/server -l pthread
-```
-If your ASIO headers are in a non-standard directory, include the path:
-```bash
-g++ -std=c++11 -pthread -I/path/to/asio/include src/server.cpp -o bin/server -l pthread
-```
+## 📋 User Manual
 
-###### Running the Server
+### Prerequisites
+---
+#### C++ Compiler: **A modern C++ compiler that supports C++11 standard (e.g., `g++`).**
 
-Execute the compiled server using:
-```bash
-./bin/server
-```
-The server will start on port 8080 by default. Access it by going to `http://localhost:8080` in your web browser.
+#### ASIO Library: **This project uses the standalone version of ASIO, which does not require Boost. It can be installed via package managers like `apt` on Ubuntu:**  
 
-###### Accessing from Other Devices
+      sudo apt install libasio-dev
+ 
 
-Any device on the same local network can access the server. They need to enter `http://<Server's Local IP Address>:8080` in their browser. The server's local IP address can be found by running `ifconfig` (on Linux/Mac) or `ipconfig` (on Windows) in the terminal.
+## 🛠️ Compilation
 
-###### Stopping the Server
+**Ensure you have g++ and the ASIO library installed. Navigate to the root directory of the project and compile the server using the following command:**
 
-To stop the server, you can simply press `Ctrl+C` in the terminal where it's running.
+    g++ -std=c++11 -pthread src/server.cpp -o bin/server -l pthread
 
-##### ⚠️ Safety Concerns
+**If your ASIO headers are in a non-standard directory, include the path:**
 
-- 🛡️ **Port Exposure**: The server listens on port 8080 by default. Ensure that exposing this port doesn't violate your network security policies.
-- ⚠️ **Directory Traversal**: Ensure that the server's root directory doesn't contain sensitive files, as all files in the directory will be publicly accessible.
-- 🔒 **No HTTPS Support**: This server does not support encrypted connections (HTTPS). For production use, it's recommended to add SSL/TLS support or use a reverse proxy that provides encryption.
-- 🐛 **Error Handling**: Basic error handling is implemented. However, in a production environment, more robust error handling and logging would be advisable.
-- 💻 **Resource Management**: The server spawns a new thread for each connection. For a high number of concurrent connections, resource management strategies should be considered.
+    g++ -std=c++11 -pthread -I/path/to/asio/include src/server.cpp -o bin/server -l pthread
 
-##### 📝 License
+## 🏃‍♂️ Running the Server
 
-This software is provided under the MIT License.
+**Execute the compiled server using:**
 
-##### ✒️ Author
+    ./bin/server
 
-[Your Name]
+**The server will start on port 8080 by default. Access it by going to http://localhost:8080 in your web browser.**
+## 📱💻 Accessing from Other Devices
+
+**Any device on the same local network can access the server. They need to enter http://<Server's Local IP Address>:8080 in their browser. The server's local IP address can be found by running ifconfig (on Linux/Mac) or ipconfig (on Windows) in the terminal.**
+## 🛑 Stopping the Server
+
+**To stop the server, you can simply press Ctrl+C in the terminal where it's running.**
+## ⚠️ Safety Concerns
+
+### 🛡️ Port Exposure:
+**The server listens on port 8080 by default. Ensure that exposing this port doesn't violate your network security policies.**
+
+### ⚠️ Directory Traversal: 
+**Ensure that the server's root directory doesn't contain sensitive files, as all files in the directory will be publicly accessible.**
+
+### 🔒 No HTTPS Support: 
+**This server does not support encrypted connections (HTTPS). For production use, it's recommended to add SSL/TLS support or use a reverse proxy that provides encryption.**
+
+### 🐛 Error Handling: 
+**Basic error handling is implemented. However, in a production environment, more robust error handling and logging would be advisable.**
+
+### 💻 Resource Management: 
+**The server spawns a new thread for each connection. For a high number of concurrent connections, resource management strategies should be considered.**
+
+## 📝 License
+**This software is provided under the MIT License.**
+## ✒️ Author
+
+**Orkun Acar**
