@@ -13,7 +13,14 @@ This C++ Web Server is a robust, efficient, and easy-to-use web server built usi
 Prerequisites
 
     C++ Compiler: A modern C++ compiler that supports C++11 standard (e.g., g++).
-    ASIO Library: This project uses the standalone version of ASIO, which does not require Boost. It can be installed from most package managers or downloaded from ASIO's official website.
+
+    ASIO Library: This project uses the standalone version of ASIO, which does not require Boost. It can be installed via package managers like apt on Ubuntu:
+
+    bash
+
+    sudo apt install libasio-dev
+
+    Or you can download it from ASIO's official website.
 
 Compilation
 
@@ -58,5 +65,3 @@ This software is provided under the MIT License.
 ✒️ Author
 
 [Your Name]
-
-Should you have any questions or encounter issues, please open an issue in the repository. Enjoy your very own C++ Web Server!
