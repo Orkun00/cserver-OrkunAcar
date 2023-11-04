@@ -1,0 +1,39 @@
+/* Styles for the overall page */
+body {
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Set height to full viewport height */
+    background-image: url('images/Matrix.webp'); /* Background image for the page */
+    background-size: cover; /* Ensure the image covers the full viewport */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Fix the background image during scroll */
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* General styles for clickable areas */
+.clickable-area {
+    position: absolute; /* Position elements absolutely within their relative parent */
+    cursor: pointer; /* Change cursor to indicate clickable areas */
+    border-radius: 50%; /* Make elements circular */
+    /* Temporary background color for visibility during development */
+    /* Remove or comment out these lines before production */
+}
+
+/* Styles specific to the red pill area */
+.red-pill {
+    width: 7.56%; /* Width as a percentage of the parent element */
+    height: 5.87%; /* Height as a percentage of the parent element */
+    top: 69.69%; /* Distance from the top of the parent element */
+    left: 22.059%; /* Distance from the left of the parent element */
+    background-color: rgba(255, 0, 0, 0.2); /* Semi-transparent red background for visibility during development */
+}
+
+/* Styles specific to the blue pill area */
+.blue-pill {
+    width: 7.4265%; /* Width as a percentage of the parent element */
+    height: 5.23%; /* Height as a percentage of the parent element */
+    top: 70.30%; /* Distance from the top of the parent element */
+    right: 23.289%; /* Distance from the right of the parent element */
+    background-color: rgba(0, 0, 255, 0.2); /* Semi-transparent blue background for visibility during development */
+}
