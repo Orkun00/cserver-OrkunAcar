@@ -14,7 +14,7 @@
 - **Local Network Accessibility:
   Accessible from any device within the same local network.**
 
-## ⚙️ Enhanced Features
+## 🧰 Enhanced Features
 
 ### Dynamic Content:
 **In addition to serving static files, the server is capable of delivering dynamic web pages. Users can interact with elements on the page, such as clickable areas that redirect to external URLs. An example implementation of this feature is provided in the project, where users can choose between two options (represented as a red pill and a blue pill) which redirect them to different YouTube videos.**
