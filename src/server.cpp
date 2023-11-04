@@ -1,16 +1,4 @@
-// Define ASIO standalone mode
-#define ASIO_STANDALONE
-// Include necessary headers
-#include <asio.hpp>
-#include <fstream>
-#include <iostream> // Include this header for std::cout and std::cerr
-#include <sstream>
-#include <string>
-#include <unordered_map>
-#include <thread>
-
-// Use namespace for easier syntax
-using asio::ip::tcp;
+#include "server.h"
 
 // Root directory where server files are located
 const std::string root_directory = "site/";
@@ -24,13 +12,13 @@ std::unordered_map<std::string, std::string> content_type_map = {
 };
 
 // Function to get the MIME type based on file extension
-std::string get_content_type(const std::string& extension) {
-    // Check if the extension is in the map
-    if (content_type_map.find(extension) != content_type_map.end()) {
-        return content_type_map[extension]; // Return the MIME type
-    }
-    return "application/octet-stream"; // Default MIME type if not found
-}
+// std::string get_content_type(const std::string& extension) {
+//     // Check if the extension is in the map
+//     if (content_type_map.find(extension) != content_type_map.end()) {
+//         return content_type_map[extension]; // Return the MIME type
+//     }
+//     return "application/octet-stream"; // Default MIME type if not found
+// }
 
 // Function to create the HTTP response message
 std::string make_http_response(const std::string& status, const std::string& content_type, const std::string& content) {
