@@ -1,5 +1,7 @@
 #ifndef SERVER_H
 #define SERVER_H
+#define ASIO_STANDALONE
+#include <asio.hpp>
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -8,7 +10,7 @@
 #include <thread>
 #include <string>
 #include <asio.hpp>
-#define ASIO_STANDALONE
+
 
 // Use namespace for easier syntax
 using asio::ip::tcp;
